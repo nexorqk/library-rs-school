@@ -263,7 +263,7 @@ a {
 }
 
 .transition-active {
-  animation-duration: move-active;
+  animation-name: move-active;
   animation-duration: 5s;
 }
 
@@ -277,7 +277,7 @@ a {
 }
 
 .transition-left {
-  animation-duration: move-left;
+  animation-name: move-left;
   animation-duration: 5s;
 }
 

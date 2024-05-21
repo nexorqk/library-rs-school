@@ -48,8 +48,8 @@ export const carousel = () => {
       document.querySelector("#item-active").innerHTML = ITEM_RIGHT.innerHTML;
     }
 
-    DOT_FIRST.addEventListener("click", moveLeft);
-    DOT_SECOND.addEventListener("click", moveActive);
-    DOT_THREE.addEventListener("click", moveRight);
+    // DOT_FIRST.addEventListener("click", moveLeft);
+    // DOT_SECOND.addEventListener("click", moveActive);
+    // DOT_THREE.addEventListener("click", moveRight);
   });
 };
