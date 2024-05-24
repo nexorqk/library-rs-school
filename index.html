@@ -106,98 +106,43 @@
             and a cozy coffee shop inside
           </p>
           <div class="about-slider">
-            <div class="about-slider__images__wrapper" id="carousel-wrapper">
-              <div class="about-slider__images-wrapper desktop" id="carousel">
-                <div class="about-slider__images" id="item-left">
-                  <img
-                    src="./assets/images/about-slider/image-1.jpg"
-                    alt="Library girl"
-                    class="about-slider__image"
-                  />
-                  <img
-                    src="./assets/images/about-slider/image-2.jpg"
-                    alt="Socrates"
-                    class="about-slider__image"
-                  />
-                  <img
-                    src="./assets/images/about-slider/image-3.jpg"
-                    alt="Library"
-                    class="about-slider__image"
-                  />
-                </div>
-                <div class="about-slider__images" id="item-active">
-                  <img
-                    src="./assets/images/about-slider/image-2.jpg"
-                    alt="Library girl"
-                    class="about-slider__image"
-                  />
-                  <img
-                    src="./assets/images/about-slider/image-3.jpg"
-                    alt="Socrates"
-                    class="about-slider__image"
-                  />
-                  <img
-                    src="./assets/images/about-slider/image-4.jpg"
-                    alt="Library"
-                    class="about-slider__image"
-                  />
-                </div>
-                <div class="about-slider__images" id="item-right">
-                  <img
-                    src="./assets/images/about-slider/image-3.jpg"
-                    alt="Library girl"
-                    class="about-slider__image"
-                  />
-                  <img
-                    src="./assets/images/about-slider/image-4.jpg"
-                    alt="Socrates"
-                    class="about-slider__image"
-                  />
-                  <img
-                    src="./assets/images/about-slider/image-5.jpg"
-                    alt="Library"
-                    class="about-slider__image"
-                  />
-                </div>
-              </div>
-              <div class="about-slider__images-wrapper mobile">
-                <img
-                  src="./assets/images/about-slider/image-1.jpg"
-                  alt="Library girl"
-                  class="about-slider__image"
-                />
-                <img
-                  src="./assets/images/about-slider/image-2.jpg"
-                  alt="Socrates"
-                  class="about-slider__image"
-                />
-                <img
-                  src="./assets/images/about-slider/image-3.jpg"
-                  alt="Library"
-                  class="about-slider__image"
-                />
-                <img
-                  src="./assets/images/about-slider/image-4.jpg"
-                  alt="Library"
-                  class="about-slider__image"
-                />
-                <img
-                  src="./assets/images/about-slider/image-5.jpg"
-                  alt="Library"
-                  class="about-slider__image"
-                />
-              </div>
+            <div class="about-slider__images">
+              <img
+                src="./assets/images/about-slider/image-1.jpg"
+                alt="Library girl"
+                class="about-slider__image"
+              />
+              <img
+                src="./assets/images/about-slider/image-2.jpg"
+                alt="Socrates"
+                class="about-slider__image"
+              />
+              <img
+                src="./assets/images/about-slider/image-3.jpg"
+                alt="Library"
+                class="about-slider__image"
+              />
+              <img
+                src="./assets/images/about-slider/image-4.jpg"
+                alt="Library"
+                class="about-slider__image"
+              />
+              <img
+                src="./assets/images/about-slider/image-5.jpg"
+                alt="Library"
+                class="about-slider__image"
+              />
             </div>
-            <div class="about-slider__dots">
-              <div class="about-slider__dot" id="dot-first">
+            <div class="about-slider__dot-wrapper">
+              <div class="about-slider__dot">
                 <div
                   class="about-slider__dot-inner about-slider__dot--active"
                 ></div>
               </div>
-              <div class="about-slider__dot" id="dot-second">
+              <div class="about-slider__dot">
                 <div class="about-slider__dot-inner"></div>
               </div>
-              <div class="about-slider__dot" id="dot-three">
+              <div class="about-slider__dot">
                 <div class="about-slider__dot-inner"></div>
               </div>
               <div class="about-slider__dot">
@@ -216,7 +161,7 @@
             Favorites
             <div class="section-title__line">&nbsp;</div>
           </h2>
-          <div class="favorites-seasons">
+          <div class="favorites-seasons__wrapper">
             <div class="favorites-season">
               <p class="favorites-season__text">Pick favorites of season</p>
               <div class="favorites-season__inputs">
@@ -808,10 +753,12 @@
               or you can register a new account
             </p>
             <div class="library-cards__buttons">
-              <button class="button-base library-cards__get-card__button">
+              <button
+                class="button-base library-cards__get-card__button sign-up"
+              >
                 Sign Up
               </button>
-              <button class="button-base library-cards__get-card__button">
+              <button class="button-base library-cards__get-card__button login">
                 Log In
               </button>
             </div>
@@ -923,6 +870,44 @@
         </div>
       </div>
     </footer>
+    <div class="register-modal">
+      <div class="register-close">
+        <span class="line right"></span>
+        <span class="line left"></span>
+      </div>
+      <h2 class="register-modal__title">Register</h2>
+      <form class="register-form">
+        <div class="register-form__row">
+          <label for="first-name">First name</label>
+          <input type="text" id="first-name" name="first-name" required />
+        </div>
+        <div class="register-form__row">
+          <label for="last-name">Last name</label>
+          <input type="text" id="last-name" name="last-name" required />
+        </div>
+        <div class="register-form__row">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="register-form__row">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            required
+          />
+        </div>
+        <input class="register-submit" type="submit" value="Sign Up" />
+        <p>
+          Already have an account?&nbsp;<a class="register-login" href="/login"
+            >Login</a
+          >
+        </p>
+      </form>
+    </div>
+    <div class="dark-bg"></div>
 
     <script type="module" src="js/index.js"></script>
   </body>
