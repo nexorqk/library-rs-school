@@ -2,28 +2,27 @@ export const favoriteSlider = () => {
   const inputs = document.querySelectorAll("input[name='season']");
   const cards = document.querySelectorAll(".favorites-seasons__cards");
 
+  window.addEventListener("DOMContentLoaded", () => {
+    cardsArr[0].classList.add("show");
+  });
+
   const inputsArr = Array.from(inputs);
   const cardsArr = Array.from(cards);
 
+  const cardsSeason = {
+    winter: 0,
+    spring: 1,
+    summer: 2,
+    autumn: 3,
+  };
+
   inputsArr.forEach((input) =>
     input.addEventListener("click", () => {
-      switch (input.id) {
-        case "winter":
-          cardsArr.forEach((input) => input.classList.add("hidden"));
-          cardsArr[0].classList.remove("hidden");
-          break;
-        case "spring":
-          cardsArr.forEach((input) => input.classList.add("hidden"));
-          cardsArr[1].classList.remove("hidden");
-          break;
-        case "summer":
-          cardsArr.forEach((input) => input.classList.add("hidden"));
-          cardsArr[2].classList.remove("hidden");
-          break;
-        case "autumn":
-          cardsArr.forEach((input) => input.classList.add("hidden"));
-          cardsArr[3].classList.remove("hidden");
-      }
+      cardsArr.forEach((cards) => {
+        cards.classList.remove("show");
+      });
+
+      cardsArr[cardsSeason[input.id]].classList.add("show");
     })
   );
 };
