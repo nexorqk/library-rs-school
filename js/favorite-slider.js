@@ -18,11 +18,12 @@ export const favoriteSlider = () => {
 
   inputsArr.forEach((input) =>
     input.addEventListener("click", () => {
-      cardsArr.forEach((cards) => {
-        cards.classList.remove("show");
-      });
-
-      cardsArr[cardsSeason[input.id]].classList.add("show");
+      setTimeout(() => {
+        cardsArr.forEach((cards) => {
+          cards.classList.remove("show");
+        });
+        cardsArr[cardsSeason[input.id]].classList.add("show");
+      }, 2000);
     })
   );
 };

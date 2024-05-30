@@ -336,7 +336,6 @@ a {
 }
 
 .fade-out {
-  opacity: 0;
   animation: fade-out 2s linear;
 }
 
